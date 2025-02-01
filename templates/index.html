@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Visit Application Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        {% if stage == 1 %}
+            <h1>Stage 1: Personal Information</h1>
+            <form method="POST">
+                <label>Full Name</label><input type="text" name="full_name" required><br>
+                <label>Date of Birth</label><input type="date" name="dob" required><br>
+                <label>Nationality</label><input type="text" name="nationality" required><br>
+                <label>Email</label><input type="email" name="email" required><br>
+                <label>Phone</label><input type="text" name="phone" required><br>
+                <button type="submit">Next</button>
+            </form>
+        {% elif stage == 2 %}
+            <h1>Stage 2: Travel Preferences</h1>
+            <form method="POST">
+                <label>Departure Date</label><input type="date" name="departure_date" required><br>
+                <label>Return Date</label><input type="date" name="return_date" required><br>
+                <label>Accommodation Preference</label><select name="accommodation">
+                    <option value="Space Hotel">Space Hotel</option>
+                    <option value="Martian Base">Martian Base</option>
+                </select><br>
+                <label>Special Requests</label><textarea name="special_requests"></textarea><br>
+                <button type="submit">Next</button>
+            </form>
+        {% elif stage == 3 %}
+            <h1>Stage 3: Health and Safety</h1>
+            <form method="POST">
+                <label>Health Declaration</label><input type="checkbox" name="health_declaration"><br>
+                <label>Emergency Contact</label><input type="text" name="emergency_contact" required><br>
+                <label>Medical Conditions</label><textarea name="medical_conditions"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>
