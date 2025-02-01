@@ -42,7 +42,7 @@ Ready to launch into the cosmos? Here’s how to get the **Mars Visit Applicatio
 
 🌍 Deployed Version:
 
-The application is also available to view and test live! Check it out on Heroku or the platform of your choice.
+The application is also available to view and test live! Check it out [here](https://marshotel-b0fe38b2ef9c.herokuapp.com/stage1).
 
 🌠 Visit the Mars Application Form (Live Demo)
 
